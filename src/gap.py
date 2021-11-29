@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from __future__ import division
 import sys
 import argparse
@@ -177,7 +179,7 @@ if __name__ == "__main__":
     for query in sorted(theqrel.getQueries()):
         qgap = gap(query, therun, theqrel)
         if args.verbose:
-            print "\t".join([runname, query, str(qgap)])
+            print("\t".join([runname, query, str(qgap)]))
         mgap += qgap
     mgap /= len(theqrel.getQueries())
-    print "\t".join([runname,'avg',str(mgap)])
+    print ("\t".join([runname,'avg',str(mgap)]))
